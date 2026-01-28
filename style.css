@@ -510,3 +510,8 @@ footer { padding: 50px 20px 100px; text-align: center; background: #fff; font-si
     height: 25px;
     background: #ddd;
 }
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh; 
+    touch-action: none;
+}

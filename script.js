@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const overlay = document.getElementById('overlay');
     const openBtn = document.getElementById('open-btn');
-
     if (openBtn && overlay) {
         openBtn.addEventListener('click', () => {
             toggleMusic();
             overlay.classList.add('slide-up');
+            document.body.classList.remove('no-scroll');
             window.scrollTo(0, 0);
             setTimeout(() => {
                 overlay.style.display = 'none';
