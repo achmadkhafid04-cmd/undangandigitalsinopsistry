@@ -515,3 +515,7 @@ body.no-scroll {
     height: 100vh; 
     touch-action: none;
 }
+.ec-content .gold-btn {
+    margin: 5px 0;
+    width: 100%;
+}

@@ -42,6 +42,18 @@ function sanitize(string) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const saveDateBtn = document.getElementById('save-date-btn');
+    if (saveDateBtn) {
+        saveDateBtn.addEventListener('click', () => {
+            const title = "The Wedding of Qurrota & Fajar";
+            const details = "Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara resepsi pernikahan kami.";
+            const location = "Infinity Hall";
+            const startTime = "20260215T030000Z"; 
+            const endTime = "20260215T060000Z";
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startTime}/${endTime}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+            window.open(calendarUrl, '_blank');
+        });
+    }
 
     loadComments();
 
